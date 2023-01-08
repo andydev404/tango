@@ -13,4 +13,9 @@ const colors = {
   }
 };
 
-export { colors };
+const fonts = {
+  heading: `"Playfair Display", serif`,
+  body: `"Mulish", sans-serif`
+};
+
+export { colors, fonts };
