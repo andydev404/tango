@@ -1,7 +1,11 @@
-export default function Home() {
+import { Logo } from '@components/Logo';
+
+function Home() {
   return (
     <>
-      <div>Tango</div>
+      <Logo />
     </>
   );
 }
+
+export default Home;
