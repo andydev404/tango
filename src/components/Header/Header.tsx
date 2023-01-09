@@ -15,7 +15,7 @@ export function Header() {
               <NavLink href="/login">Iniciar sesión</NavLink>
             </div>
             <Button href="/register" color="brand" className="hidden md:block">
-              <span>Crear mi tienda</span>
+              Crear mi tienda
             </Button>
             <div className="-mr-1 md:hidden">
               <MobileNavigation />

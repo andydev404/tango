@@ -9,3 +9,8 @@ export type VariantStylesProps = Record<
   'solid' | 'outline',
   VariantStylesValuesProps
 >;
+
+export type ButtonSizeProps = {
+  base: string;
+  large: string;
+};
