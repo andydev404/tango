@@ -19,10 +19,10 @@ export function HeroSection() {
         </span>{' '}
         de una forma fácil
       </h1>
-      <p className="mx-auto mt-10 max-w-2xl text-lg tracking-tight text-brand-800">
-        Con Tango vas a poder crear una página web con todos tus productos y
-        recibir pedidos directamente en tu WhatsApp de forma fácil, segura,
-        rápida y sin comisiones.
+      <p className="mx-auto mt-10 max-w-2xl text-lg tracking-tight">
+        Usando Tango, puedes crear un sitio web con todos tus productos y
+        recibir órdenes directamente en tu WhatsApp de manera fácil, segura y
+        rápida, sin cobros adicionales.
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
         <Button

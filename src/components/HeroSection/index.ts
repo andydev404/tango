@@ -1,2 +1,1 @@
-import { HeroSection } from './HeroSection';
-export { HeroSection };
+export * from './HeroSection';

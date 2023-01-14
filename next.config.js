@@ -3,6 +3,9 @@ const nextConfig = {
   reactStrictMode: true,
   experimental: {
     scrollRestoration: true
+  },
+  images: {
+    domains: ['salient.tailwindui.com']
   }
 };
 

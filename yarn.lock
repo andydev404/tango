@@ -111,16 +111,6 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@fontsource/mulish@^4.5.13":
-  version "4.5.13"
-  resolved "https://registry.yarnpkg.com/@fontsource/mulish/-/mulish-4.5.13.tgz#cba3c17bf943fd1d9a3f0114d536df87c61b5640"
-  integrity sha512-uJ4NzvEZSCZnrKU0Xvk6Qf0WFMRnyCwslLOtHIao3vh2+W1llbaZy4+PiR6mcB2Y62dPG2HvZPN0NnKfDaFSbA==
-
-"@fontsource/playfair-display@^4.5.12":
-  version "4.5.12"
-  resolved "https://registry.yarnpkg.com/@fontsource/playfair-display/-/playfair-display-4.5.12.tgz#8f5f5d980e227b84f26138462c7bb644ad6bc604"
-  integrity sha512-B7EUxMRW6EzE701WICRmpQM30hd6vHPMrfOzb7u8H0nEwrjK2PtJjGv7rbEl9Q02qoT54947yi630QgL9he5/A==
-
 "@headlessui/react@^1.7.7":
   version "1.7.7"
   resolved "https://registry.yarnpkg.com/@headlessui/react/-/react-1.7.7.tgz#d6f8708d8943ae8ebb1a6929108234e4515ac7e8"
