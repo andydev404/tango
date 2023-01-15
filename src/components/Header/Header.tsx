@@ -14,7 +14,7 @@ export function Header() {
             <div className="hidden md:block">
               <NavLink href="/login">Iniciar sesión</NavLink>
             </div>
-            <Button href="/register" color="brand" className="hidden md:block">
+            <Button href="/login" color="brand" className="hidden md:block">
               Crear mi tienda
             </Button>
             <div className="-mr-1 md:hidden">

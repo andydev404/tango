@@ -37,7 +37,7 @@ export function MobileNavigation() {
             as="div"
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-brand-900 shadow-xl ring-1 ring-brand-900/5"
           >
-            <MobileNavLink href="/register">Crear mi tienda</MobileNavLink>
+            <MobileNavLink href="/login">Crear mi tienda</MobileNavLink>
             <hr className="m-2 border-slate-300/40" />
             <MobileNavLink href="/login">Iniciar sesión</MobileNavLink>
           </Popover.Panel>

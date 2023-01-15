@@ -26,7 +26,7 @@ export function HeroSection() {
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
         <Button
-          href="/register"
+          href="/login"
           size="large"
           variant="outline"
           className="font-bold"

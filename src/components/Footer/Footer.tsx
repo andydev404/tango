@@ -15,7 +15,7 @@ export function Footer() {
               <Button href="/login" color="brand">
                 Iniciar sesión
               </Button>
-              <Button href="/register" color="brand">
+              <Button href="/login" color="brand">
                 Crear mi tienda
               </Button>
             </div>

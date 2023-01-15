@@ -2,7 +2,7 @@ import { ReactElement } from 'react';
 import { Features } from '@components/Features';
 import { HeroSection } from '@components/HeroSection';
 import { HowWorks } from '@components/HowWorks';
-import { PrimaryLayout } from 'src/layouts/PrimaryLayout';
+import { PrimaryLayout } from '@layouts/PrimaryLayout';
 
 function Home() {
   return (
