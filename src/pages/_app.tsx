@@ -1,6 +1,8 @@
 import type { AppProps } from 'next/app';
 import { NextPage } from 'next';
 import { ComponentType, ReactElement, ReactNode } from 'react';
+import { DefaultSeo } from 'next-seo';
+import { SEOValues } from '../../next-seo.config';
 import 'focus-visible';
 import '@styles/global.css';
 
@@ -17,7 +19,12 @@ interface AppPropsWithLayout extends AppProps {
 function App({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout || (page => page);
 
-  return getLayout(<Component {...pageProps} />);
+  return getLayout(
+    <>
+      <DefaultSeo {...SEOValues} />
+      <Component {...pageProps} />
+    </>
+  );
 }
 
 export default App;

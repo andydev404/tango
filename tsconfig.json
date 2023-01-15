@@ -19,6 +19,7 @@
       "@components/*": ["src/components/*"],
       "@utils/*": ["src/utils/*"],
       "@styles/*": ["src/styles/*"],
+      "@common/*": ["src/common/*"],
       "@layouts/*": ["src/layouts/*"]
     }
   },

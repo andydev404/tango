@@ -16,5 +16,5 @@ function Home() {
 
 export default Home;
 Home.getLayout = (page: ReactElement) => {
-  return <PrimaryLayout>{page}</PrimaryLayout>;
+  return <PrimaryLayout page={{ title: 'Inicio' }}>{page}</PrimaryLayout>;
 };

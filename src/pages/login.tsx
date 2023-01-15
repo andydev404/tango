@@ -38,5 +38,7 @@ function Login() {
 export default Login;
 
 Login.getLayout = (page: ReactElement) => {
-  return <AuthLayout>{page}</AuthLayout>;
+  return (
+    <AuthLayout page={{ title: 'Comienza a usar Tango' }}>{page}</AuthLayout>
+  );
 };

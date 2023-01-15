@@ -1,14 +1,14 @@
-import { ReactNode } from 'react';
+import Head from 'next/head';
 import { Footer } from '@components/Footer';
 import { Header } from '@components/Header';
+import { LayoutProps } from '@common/types';
 
-type Props = {
-  children: ReactNode;
-};
-
-export function PrimaryLayout({ children }: Props) {
+export function PrimaryLayout({ children, page }: LayoutProps) {
   return (
     <>
+      <Head>
+        <title>{page.title}</title>
+      </Head>
       <Header />
       <main>{children}</main>
       <Footer />
