@@ -1,3 +1,8 @@
+import { motion } from 'framer-motion';
+import {
+  opacityAnimationProps,
+  slideUpAnimationProps
+} from '@common/utils/animations';
 import { Container } from '@components/Container';
 import { features } from './data';
 
@@ -6,7 +11,10 @@ export function Features() {
     <section className="pt-20 pb-14 sm:pb-20 sm:pt-32 lg:pb-32">
       <Container>
         <div className="mx-auto max-w-2xl md:text-center">
-          <h2 className="font-serif text-3xl font-medium tracking-tight sm:text-4xl md:text-6xl">
+          <motion.h2
+            {...opacityAnimationProps}
+            className="font-serif text-3xl font-medium tracking-tight sm:text-4xl md:text-6xl"
+          >
             <span className="relative whitespace-nowrap font-bold ">
               <svg
                 aria-hidden="true"
@@ -19,19 +27,25 @@ export function Features() {
               <span className="relative"> Beneficios</span>
             </span>{' '}
             de usar Tango
-          </h2>
+          </motion.h2>
 
-          <p className="mt-4 text-lg tracking-tight">
+          <motion.p
+            {...opacityAnimationProps}
+            className="mt-4 text-lg tracking-tight"
+          >
             Conoce las ventajas que ofrecemos para ayudarte a crecer tu negocio
-          </p>
+          </motion.p>
         </div>
-        <ul
+        <motion.ul
           role="list"
+          transition={{ staggerChildren: 0.07, delayChildren: 0.2 }}
           className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
         >
           {features.map((feature, featureIndex) => (
-            <li
+            <motion.li
               key={featureIndex}
+              {...slideUpAnimationProps}
+              whileHover={{ scale: 1.03, rotateZ: 2 }}
               className="rounded-2xl border border-gray-200 p-8"
             >
               <h3 className="font-serif text-2xl font-semibold">
@@ -40,9 +54,9 @@ export function Features() {
               <p className="mt-2 text-sm text-gray-700">
                 {feature.description}
               </p>
-            </li>
+            </motion.li>
           ))}
-        </ul>
+        </motion.ul>
       </Container>
     </section>
   );
