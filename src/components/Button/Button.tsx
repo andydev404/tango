@@ -1,4 +1,5 @@
-import Link from 'next/link';
+import { motion } from 'framer-motion';
+import NextLink from 'next/link';
 import clsx from 'clsx';
 import { ComponentPropsWithoutRef } from 'react';
 import { baseStyles, variantStyles, sizes } from './variants';
@@ -15,6 +16,8 @@ type Props = Pick<ComponentPropsWithoutRef<'link'>, 'href' | 'children'> & {
   size?: string;
   className?: string;
 };
+
+const Link = motion(NextLink);
 
 export function Button({
   variant = 'solid',
@@ -34,8 +37,13 @@ export function Button({
   );
 
   return href ? (
-    <Link href={href} className={className} {...props} />
+    <Link
+      whileTap={{ scale: 0.9 }}
+      href={href}
+      className={className}
+      {...props}
+    />
   ) : (
-    <button className={className} {...props} />
+    <motion.button whileTap={{ scale: 0.9 }} className={className} {...props} />
   );
 }
