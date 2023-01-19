@@ -22,7 +22,7 @@ function Login() {
         </Button>
         <div className="mt-8 border-t border-gray-200 pt-8 text-center">
           <Button
-            href="/login"
+            href="/dashboard"
             size="large"
             variant="outline"
             className="w-full font-bold"

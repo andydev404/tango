@@ -20,6 +20,7 @@
       "@utils/*": ["src/utils/*"],
       "@styles/*": ["src/styles/*"],
       "@common/*": ["src/common/*"],
+      "@stores/*": ["src/stores/*"],
       "@layouts/*": ["src/layouts/*"]
     }
   },

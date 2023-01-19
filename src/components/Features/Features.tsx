@@ -1,8 +1,5 @@
 import { motion } from 'framer-motion';
-import {
-  opacityAnimationProps,
-  slideUpAnimationProps
-} from '@common/utils/animations';
+import { opacityAnimationProps, slideUpAnimationProps } from '@common/utils';
 import { Container } from '@components/Container';
 import { features } from './data';
 

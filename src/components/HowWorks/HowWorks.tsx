@@ -5,10 +5,7 @@ import { Container } from '@components/Container';
 import { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import { steps } from './data';
-import {
-  opacityAnimationProps,
-  slideUpAnimationProps
-} from '@common/utils/animations';
+import { opacityAnimationProps, slideUpAnimationProps } from '@common/utils';
 
 export function HowWorks() {
   let [tabOrientation, setTabOrientation] = useState('horizontal');

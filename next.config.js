@@ -5,7 +5,7 @@ const nextConfig = {
     scrollRestoration: true
   },
   images: {
-    domains: ['salient.tailwindui.com']
+    domains: ['salient.tailwindui.com', 'images.unsplash.com']
   }
 };
 
