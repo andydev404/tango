@@ -1,4 +1,4 @@
-import React from 'react';
+import { useMemo } from 'react';
 import { useTable, useFlexLayout, usePagination } from 'react-table';
 import { IOrder, OrderStatus } from '@common/types';
 
@@ -18,23 +18,13 @@ const COLUMNS = [
     maxWidth: 260
   },
   {
-    Header: () => (
-      <div className="ltr:ml-auto ltr:text-right rtl:mr-auto rtl:text-left">
-        Fecha
-      </div>
-    ),
+    Header: 'Fecha',
     accessor: 'createdAt',
-    // @ts-ignore
-    Cell: ({ cell: { value } }) => <div>{value}</div>,
     minWidth: 100,
     maxWidth: 140
   },
   {
-    Header: () => (
-      <div className="ltr:ml-auto ltr:text-right rtl:mr-auto rtl:text-left">
-        Estado
-      </div>
-    ),
+    Header: 'Estado',
     accessor: 'status',
     // @ts-ignore
     Cell: ({ cell: { value } }) => (
@@ -52,8 +42,8 @@ const COLUMNS = [
 ];
 
 export function OrderTable({ orders }: { orders: IOrder[] }) {
-  const data = React.useMemo(() => orders, [orders]);
-  const columns = React.useMemo(() => COLUMNS, []);
+  const data = useMemo(() => orders, [orders]);
+  const columns = useMemo(() => COLUMNS, []);
 
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
     useTable(

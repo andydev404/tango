@@ -2,6 +2,8 @@ import clsx from 'clsx';
 import { Logo } from '@components/Logo';
 import { NavigationItem, AccountInfo } from '@common/types/navigation';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 type Props = {
   menuItems: NavigationItem[];
@@ -9,6 +11,7 @@ type Props = {
 };
 
 export function SidebarDesktopMenu({ menuItems, account }: Props) {
+  const router = useRouter();
   return (
     <div className="hidden md:fixed md:inset-y-0 md:flex md:w-64 md:flex-col">
       <div className="flex min-h-0 flex-1 flex-col border-r border-gray-200 bg-white">
@@ -18,11 +21,11 @@ export function SidebarDesktopMenu({ menuItems, account }: Props) {
           </div>
           <nav className="mt-8 flex-1 space-y-2 bg-white px-4">
             {menuItems.map(item => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
                 className={clsx(
-                  item.current
+                  router.asPath === item.href
                     ? 'bg-brand-900 text-white'
                     : 'text-gray-600 hover:bg-brand-900 hover:text-white',
                   'group flex items-center rounded-lg px-4 py-3 font-semibold transition'
@@ -30,7 +33,7 @@ export function SidebarDesktopMenu({ menuItems, account }: Props) {
               >
                 <item.icon
                   className={clsx(
-                    item.current
+                    router.asPath === item.href
                       ? 'text-white'
                       : 'text-gray-400 group-hover:text-white',
                     'mr-3 h-6 w-6 flex-shrink-0 transition'
@@ -38,7 +41,7 @@ export function SidebarDesktopMenu({ menuItems, account }: Props) {
                   aria-hidden="true"
                 />
                 {item.name}
-              </a>
+              </Link>
             ))}
           </nav>
         </div>

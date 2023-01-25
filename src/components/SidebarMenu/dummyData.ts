@@ -8,11 +8,15 @@ import {
 } from '@heroicons/react/24/outline';
 
 export const navigation: NavigationItem[] = [
-  { name: 'Inicio', href: '#', icon: HomeIcon, current: true },
-  { name: 'Tiendas', href: '#', icon: BuildingStorefrontIcon, current: false },
-  { name: 'Productos', href: '#', icon: ArchiveBoxIcon, current: false },
-  { name: 'Categorias', href: '#', icon: InboxIcon, current: false },
-  { name: 'Ordenes', href: '#', icon: ShoppingBagIcon, current: false }
+  { name: 'Inicio', href: '/dashboard', icon: HomeIcon },
+  {
+    name: 'Tiendas',
+    href: '/shops',
+    icon: BuildingStorefrontIcon
+  },
+  { name: 'Productos', href: '#', icon: ArchiveBoxIcon },
+  { name: 'Categorias', href: '#', icon: InboxIcon },
+  { name: 'Ordenes', href: '#', icon: ShoppingBagIcon }
 ];
 
 export const account: AccountInfo = {
