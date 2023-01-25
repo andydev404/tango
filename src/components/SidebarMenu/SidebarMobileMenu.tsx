@@ -4,9 +4,11 @@ import { XMarkIcon } from '@heroicons/react/24/outline';
 import { shallow } from 'zustand/shallow';
 import Image from 'next/image';
 import clsx from 'clsx';
+import Link from 'next/link';
 import { Logo } from '@components/Logo';
 import { NavigationItem, AccountInfo } from '@common/types';
 import { useSidebarMenuStore } from '@stores/sidebarMenuStore';
+import { useRouter } from 'next/router';
 
 type Props = {
   menuItems: NavigationItem[];
@@ -14,6 +16,7 @@ type Props = {
 };
 
 export function SidebarMobileMenu({ menuItems, account }: Props) {
+  const router = useRouter();
   const { menuIsOpen, closeSideMenu } = useSidebarMenuStore(
     state => ({
       menuIsOpen: state.menuIsOpen,
@@ -81,11 +84,12 @@ export function SidebarMobileMenu({ menuItems, account }: Props) {
                 </div>
                 <nav className="mt-8 space-y-2 px-4">
                   {menuItems.map(item => (
-                    <a
+                    <Link
                       key={item.name}
+                      onClick={closeSideMenu}
                       href={item.href}
                       className={clsx(
-                        item.current
+                        router.asPath === item.href
                           ? 'bg-brand-900 text-white'
                           : 'text-gray-600 hover:bg-brand-900 hover:text-white',
                         'group flex items-center rounded-lg px-4 py-3 font-semibold transition'
@@ -93,7 +97,7 @@ export function SidebarMobileMenu({ menuItems, account }: Props) {
                     >
                       <item.icon
                         className={clsx(
-                          item.current
+                          router.asPath === item.href
                             ? 'text-white'
                             : 'text-gray-400 group-hover:text-white',
                           'mr-4 h-6 w-6 flex-shrink-0 transition'
@@ -101,7 +105,7 @@ export function SidebarMobileMenu({ menuItems, account }: Props) {
                         aria-hidden="true"
                       />
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </nav>
               </div>
