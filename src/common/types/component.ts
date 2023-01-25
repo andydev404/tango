@@ -20,7 +20,7 @@ export enum OrderStatus {
 
 export interface IOrder {
   id: number;
-  number: number | string;
+  orderNumber: number | string;
   total: number;
   createdAt: string;
   status: OrderStatus;
