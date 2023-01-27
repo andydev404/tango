@@ -36,4 +36,7 @@ export interface IShop {
   totalProducts: number;
   totalOrders: number;
   status: string;
+  whatsappNumber: string;
+  address: string;
+  description: string;
 }

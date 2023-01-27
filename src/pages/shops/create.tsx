@@ -3,13 +3,12 @@ import { DashboardLayout } from '@layouts/DashboardLayout';
 import { ReactElement } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { Input, TextArea } from '@components/Form';
+import { IShop } from '@common/types';
 
-type Inputs = {
-  whatsappNumber: string;
-  address: string;
-  description: string;
-  name: string;
-};
+type Inputs = Pick<
+  IShop,
+  'name' | 'address' | 'description' | 'whatsappNumber'
+>;
 
 export default function CreateShop() {
   const {

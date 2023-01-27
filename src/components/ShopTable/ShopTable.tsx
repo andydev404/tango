@@ -5,7 +5,7 @@ import { Button } from '@components/Button';
 import { useRouter } from 'next/router';
 
 type Props = {
-  shops: IShop[];
+  shops: Pick<IShop, 'name' | 'totalOrders' | 'totalProducts' | 'status'>[];
   title?: string;
   showCreateButton?: boolean;
 };
