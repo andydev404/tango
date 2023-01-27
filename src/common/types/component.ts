@@ -30,3 +30,10 @@ export interface IOrderTable {
   columns: string[];
   rows: IOrder[];
 }
+
+export interface IShop {
+  name: string;
+  totalProducts: number;
+  totalOrders: number;
+  status: string;
+}

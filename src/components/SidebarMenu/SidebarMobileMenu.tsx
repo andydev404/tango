@@ -89,7 +89,7 @@ export function SidebarMobileMenu({ menuItems, account }: Props) {
                       onClick={closeSideMenu}
                       href={item.href}
                       className={clsx(
-                        router.asPath === item.href
+                        router.asPath.startsWith(item.href)
                           ? 'bg-brand-900 text-white'
                           : 'text-gray-600 hover:bg-brand-900 hover:text-white',
                         'group flex items-center rounded-lg px-4 py-3 font-semibold transition'
@@ -97,7 +97,7 @@ export function SidebarMobileMenu({ menuItems, account }: Props) {
                     >
                       <item.icon
                         className={clsx(
-                          router.asPath === item.href
+                          router.asPath.startsWith(item.href)
                             ? 'text-white'
                             : 'text-gray-400 group-hover:text-white',
                           'mr-4 h-6 w-6 flex-shrink-0 transition'
