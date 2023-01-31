@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import Image from 'next/image';
 
@@ -24,11 +24,6 @@ export function FileUploader({ onDropFile, multipleFile = false }: Props) {
       setFiles(acceptedFiles);
     }
   });
-
-  useEffect(() => {
-    // Make sure to revoke the data uris to avoid memory leaks
-    files.forEach((file: any) => URL.revokeObjectURL(file.preview));
-  }, [files]);
 
   const thumbs = files.map((file: any) => (
     <div key={file.name} className="h-full w-full">
