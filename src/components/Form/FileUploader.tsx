@@ -10,7 +10,7 @@ type Props = {
 
 export function FileUploader({ onDropFile, multipleFile = false }: Props) {
   const [files, setFiles] = useState<File[]>([]);
-  const MAX_FILE_SIZE_ALLOWED = 5000000; // 5 MB
+  const MAX_FILE_SIZE_ALLOWED = 5242880; // 5 MB
 
   const { getRootProps, getInputProps } = useDropzone({
     maxSize: MAX_FILE_SIZE_ALLOWED,
