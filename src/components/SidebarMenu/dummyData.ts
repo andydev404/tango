@@ -15,7 +15,7 @@ export const navigation: NavigationItem[] = [
     icon: BuildingStorefrontIcon
   },
   { name: 'Productos', href: '#', icon: ArchiveBoxIcon },
-  { name: 'Categorias', href: '#', icon: InboxIcon },
+  { name: 'Categorias', href: '/categories', icon: InboxIcon },
   { name: 'Ordenes', href: '#', icon: ShoppingBagIcon }
 ];
 
