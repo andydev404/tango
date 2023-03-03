@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import NextLink from 'next/link';
-import clsx from 'clsx';
 import { ComponentPropsWithoutRef } from 'react';
 import { baseStyles, variantStyles, sizes } from './variants';
 import {
@@ -9,6 +8,7 @@ import {
   VariantStylesProps,
   ButtonSizeProps
 } from './types';
+import { cn } from '@common/utils';
 
 type Props = Pick<ComponentPropsWithoutRef<'link'>, 'href' | 'children'> & {
   variant?: string;
@@ -27,7 +27,7 @@ export function Button({
   href,
   ...props
 }: Props) {
-  className = clsx(
+  className = cn(
     baseStyles[variant as keyof BaseStylesProps],
     variantStyles[variant as keyof VariantStylesProps][
       color as keyof VariantStylesValuesProps

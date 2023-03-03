@@ -1,6 +1,5 @@
+import { cn } from '@common/utils';
 import { forwardRef, DetailedHTMLProps, InputHTMLAttributes } from 'react';
-import clsx from 'clsx';
-
 type InputProps = DetailedHTMLProps<
   InputHTMLAttributes<HTMLInputElement>,
   HTMLInputElement
@@ -38,7 +37,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
               type={type}
               ref={ref}
               {...props}
-              className={clsx(
+              className={cn(
                 'block w-full max-w-lg appearance-none rounded-md border-brand-900 shadow-sm focus:border-brand-900 focus:ring-brand-900 sm:text-sm',
                 inputClassName,
                 [error ? 'border-red-500' : 'border-brand-900']
@@ -54,7 +53,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
                 type={type}
                 ref={ref}
                 {...props}
-                className={clsx(
+                className={cn(
                   'block w-full max-w-lg appearance-none rounded-md border-brand-900 shadow-sm focus:border-brand-900 focus:ring-brand-900 sm:text-sm',
                   inputClassName,
                   [error ? 'border-red-500' : 'border-brand-900']
